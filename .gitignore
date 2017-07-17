@@ -1,0 +1,5 @@
+//Dans ce fichier on ajoute les fichiers qu'on ne veut pas commiter avec git
+.idea/  // Dossier perso de JetBrains
+.DS_Store
+node_modules/ // On ne veut pas commiter les fichiers de node_modules = les dépendances
+npm-debug.log  // On ne commit pas les logs

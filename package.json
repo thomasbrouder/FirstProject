@@ -1,0 +1,12 @@
+{
+  "name": "schedule_tan_test",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Thomas Brouder <thomas.brouder94@gmail.com>",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
