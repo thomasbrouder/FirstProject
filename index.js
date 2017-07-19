@@ -4,7 +4,7 @@ let request = require('request');
 
 let app = express(); // On créé une application
 
-//app.use(express.static(__dirname + '/front'));  On dit queles fichiers statiques sont dans le dossier front. Pas utile pour ce projet
+//app.use(express.static(__dirname + '/front'));  On dit queles fichiers statKiques sont dans le dossier front. Pas utile pour ce projet
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html')); // Connection au serveur Quand on va appeler le serveur à la racine, on récupère res on lui renvoie le fichier index.html
 
@@ -18,8 +18,9 @@ app.get('/tan/:id', (req, res) => {
   request('http://open.tan.fr/ewp/tempsattente.json/'+req.params.id, function (error, response, body) {
     console.log('error:', error); // Print the error if one occurred
     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    console.log('body:', body); // Print the HTML for the Google homepage.
-    res.json(JSON.parse(body))
+    console.log('body:', body); // Print the HTML for the page.
+    let affichage=JSON.parse(body);
+    res.json(affichage[0].temps)
   });
 
 })
